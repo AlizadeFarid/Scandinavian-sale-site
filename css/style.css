@@ -1,0 +1,584 @@
+:root {
+    --white: #fff;
+    --black: #222;
+    --black-2: #060606;
+    --primary: #f3327c;
+    --grey: #888;
+    --light-grey: #eeeeee;
+    --light: #f7f7f7;
+    --info: #3f79d9;
+}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    color: var(--black);
+    background: var(--white);
+}
+ul,
+li {
+  list-style: none;
+}
+a, a:hover {
+  text-decoration: none !important;
+}
+img {
+  max-width: 100%;
+}
+
+/*============================Heading start============================*/
+.heading{
+    width: 100%;
+    border-bottom: 1.5px solid var(--light-grey);
+}
+.heading .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading .container .social ul,
+.heading .container .settings ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+} 
+.heading .container .social ul li i{
+    font-size: 1rem;
+    color: var(--black);
+    margin-right: 1.3rem;
+}
+.heading .container .settings ul li i{
+    margin-right: 0.3rem;
+}
+.heading .container .settings ul li a{
+    font-size: 0.7rem;
+    font-weight: 200;
+    color: var(--black);
+}
+.heading .container .settings ul li:first-child{
+    margin-right: 20px;
+}
+/*============================Heading end============================*/
+
+/*============================Header start============================*/
+.header{
+    width: 100%;
+}
+.header .container .logo{
+    text-align: center;
+    padding: 1.6rem 0;
+}
+
+/*============================Navbar start============================*/
+nav{
+    background: var(--black-2);
+}
+nav i{
+    color: var(--white);
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav ul{
+    position: relative;
+    z-index: 100;
+}
+nav ul li{
+    display: inline-block;
+    background: var(--black-2);
+    margin: 0 5px;
+    text-align: left;
+}
+nav ul li a{
+    color: var(--white) !important;
+    text-decoration: none;
+    line-height: 4.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+}
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0;
+    width: 180px;
+    float: none;
+    display: list-item;
+    border-bottom: rgba(134, 134, 134, 0.3);
+}
+nav ul ul li a{
+    line-height: 40px;
+}
+
+nav ul ul ul{
+    z-index: 100;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 180px;
+}
+nav .fa-bars{
+    margin-top: 1rem;
+    margin-left: 1.4rem;
+    cursor: pointer;
+    padding: 1rem 0;
+    display: none;
+    color: var(--white);
+}
+nav ul i{
+    font-size: .8rem;
+}
+nav ul .fa-chevron-right{
+    margin-left: 1.5rem;
+}
+/*============================Navbar end============================*/
+
+/*============================Header-inner start============================*/
+.header .header-inner .container{
+    padding: 4rem 0;
+}
+.header .header-inner .container .image img{
+    z-index: -1;
+}
+/*============================Header-inner end============================*/
+
+/*============================Header end============================*/
+
+/*============================NewArrivals start============================*/
+
+.carousel-item .card{
+    position: relative;
+}
+.newArrivals .controls-top,
+.trending .controls-top{
+    text-align: center;
+}
+.newArrivals .controls-top span,
+.trending .controls-top span{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--black);
+    padding: 0 0.8rem;
+}
+.newArrivals .controls-top .fa-arrow-left,
+.newArrivals .controls-top .fa-arrow-right,
+.trending .controls-top .fa-arrow-left,
+.trending .controls-top .fa-arrow-right{
+    font-size: 1.1rem;
+    color: var(--black);
+    transition: 0.2s linear;
+}
+.newArrivals .controls-top .fa-arrow-left:hover,
+.trending .controls-top .fa-arrow-left:hover{
+    transform: translateX(-3px);
+}
+.newArrivals .controls-top .fa-arrow-right:hover,
+.trending .controls-top .fa-arrow-right:hover{
+    transform: translateX(3px);
+}
+.card{
+    border: none !important;
+}
+.card > a{
+    position: absolute;
+    display: block;
+    padding: 0.8rem;
+    bottom: 8.5rem;
+    width: 100%;
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+    opacity: 0;
+}
+.card > a:hover{
+    background: var(--info);
+    color: var(--white);
+}
+.card:hover a{
+    opacity: 1;
+}
+.card-body h4 a{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--black);
+}
+.card-body p a{
+    color: var(--black);
+}
+/*============================NewArrivals end============================*/
+
+/*============================Spotligth start============================*/
+
+.spotlight .container .row h1{
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.spotlight .container .row a{
+    margin: 0 auto;
+}
+.spotlight .container .row a span{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--black);
+}
+/*============================Spotligth end============================*/
+
+/*============================Trending start============================*/
+/*============================Trending end============================*/
+
+
+/*============================Gallery start============================*/
+.gallery .col-sm-2{
+    margin: 0;
+    padding: 0;
+}
+.gallery .col-sm-2 img{
+    width: 100%;
+    height: 100%;
+}
+/*============================Gallery end============================*/
+
+/*============================Footer start============================*/
+.footer{
+    background: var(--light);
+}
+.footer .container .row .col-lg-3 h3{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--black);
+    font-family: 'Ubuntu', sans-serif !important;
+}
+.footer .container .row .col-lg-3 p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    color: var(--black);
+}
+
+.footer .row .col-lg-3 ul li{
+    margin-bottom: 0.4rem;
+}
+.footer .row .col-lg-3 ul li a{
+    color: var(--black);
+}
+
+.footer .row .col-lg-3 ul > a{
+    color: var(--black);
+    text-decoration: underline !important;
+}
+.footer .row .col-lg-3 .phone{
+    display: block;
+    margin-top: 20px;
+}
+.footer .row .col-lg-3 .form-control{
+    padding: 11px 8px;
+    border: 1px solid var(--light-grey);
+    box-shadow: none;
+}
+.footer .row .col-lg-3 .form-control:focus{
+    border: 1px solid var(--grey) !important;
+}
+.footer .row .col-lg-3 button,
+.contact .container .row form button,
+.pages .container .row form button{
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+    background: var(--black-2);
+    border: none;
+}
+.footer .row .col-lg-3 button:hover,
+.contact .container .row form button:hover,
+.pages .container .row form button:hover{
+    background: var(--info);
+}
+
+/*============================Footer end============================*/
+
+
+/*============================Footer end============================*/
+@media (max-width: 992px){
+    .navbar .container > i{
+        display: block;
+    }
+    .navbar .container ul{
+        display: none;
+    }
+    .navbar .container > a{
+        display: block;
+    }
+    .footer .row .left{
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+    .footer .row .right{
+        width: 100%;
+        text-align: center !important;
+    }
+    .shop .container .row p,
+    .about .container .row p,
+    .lookBook .container .row p,
+    .service .container .row p{
+        text-align: justify;
+    }
+}
+
+@media (max-width: 768px){
+    nav .fa-bars{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav ul ul{
+        display: block;
+        left: 85px;
+    }
+    nav ul ul ul{
+        left: 20px;
+    }
+    nav .container ul li{
+        display: block;
+    }
+    nav .container ul li a{
+        line-height: 3rem;
+    }
+    nav .container .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .about .row .col-4 .card > p{
+        display: block;
+    }
+    .about .row .col-4 .card span p{
+        display: none;
+    }
+}
+@media (max-width: 576px){
+    .heading .container .settings ul li:first-child{
+        display: none;
+    }
+    nav .container .row .bar:hover nav .container .row ul{
+        display: block;
+    }
+}
+/*============================Shop styling start============================*/
+.shop .container .row h2,
+.about .container .row h2,
+.lookBook .container .row h2,
+.service .container .row h2,
+.pages .container .row h2,
+.contact .container .row h2,
+.cart .container .row h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--black);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: inset 0 -0.9rem 0 #fcefcf;
+}
+.shop .container .row p,
+.about .container .row p,
+.lookBook .container .row p,
+.service .container .row p
+.contact .container .row p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+}
+.shop .container .row p a,
+.about .container .row p a,
+.lookBook .container .row p a,
+.service .container .row p a{
+    color: var(--black);
+    text-decoration: underline !important;
+    cursor: pointer !important;
+}
+.shop .container .row .pagination .page-item{
+    margin: 0 !important;
+}
+.shop .container .row .pagination .page-item .page-link{
+    color: #000 !important;
+}
+.container .row .col-12 .span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--grey);
+    opacity: 0.5;
+}
+/*============================Shop styling end============================*/
+
+/*============================Service styling start============================*/
+.service .container .row .col-8{
+    z-index: -1 !important;
+}
+/*============================Service styling end============================*/
+
+/*============================Pages styling start==========================*/
+.pages .container .row h1,h2,h3,h4,h5,h6{
+    margin-bottom: 2rem !important;
+    font-weight: 700 !important;
+    color: var(--black);
+}
+.pages .container .row h2{
+    font-size: 2rem;
+}
+.pages .container .row p img{
+    width: 250px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.pages .container .row .jumbotron p{
+    font-size: 1rem;
+}
+.pages .container .row .m-auto > p,
+.pages .container .row ul li{
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    z-index: -1 !important;
+}
+.pages .container .row .col-12 iframe{
+    width: 70%;
+}
+/*============================Pages styling end============================*/
+
+
+/*============================Contact styling start============================*/
+.contact .container .row {
+    z-index: -1 !important;
+}
+.contact .container .row .jumbotron p{
+    font-size: 1rem;
+    font-weight: 400 !important;
+}
+.contact .container .row form label,
+.pages .container .row form label{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--black);
+}
+.contact .container .row form input,
+.contact .container .row form textarea,
+.pages .container .row form input,
+.pages .container .row form textarea{
+    padding: 13px;
+    box-shadow: none !important;
+    margin-bottom: 20px;
+    border: 1px solid var(--light-grey);
+}
+.contact .container .row form textarea{
+    height: 200px;
+    resize: none;
+}
+.contact .container .row .col-12 iframe{
+    width: 100%;
+    height: 450px;
+}
+/*============================Contact styling end============================*/
+
+/*============================About styling start============================*/
+.about .container .row{
+    z-index: -1;
+}
+.about .container .row p{
+    
+}
+.about .row .col-4 .card{
+    position: relative;
+}
+.about .row .col-4 .card > p{
+    display: block;
+    color: var(--black-2);
+}
+.about .row .col-4 .card span p{
+    position: absolute;
+    padding: 0.9rem 1.3rem;
+    left: 0.8rem;
+    bottom: -0.5rem;
+    background: var(--white);
+}
+.about .row .jumbotron,
+.pages .row .jumbotron,
+.contact .row .jumbotron{
+    border-radius: 0;
+    border-left: 5px solid var(--grey);
+}
+.about .row .jumbotron span,
+.pages .row .jumbotron span,
+.contact .row .jumbotron span{
+    font-weight: 700;
+}
+.about .row button{
+    font-size: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    background: var(--black-2);
+    color: var(--white);
+    border: none;
+}
+.about .row button:hover{
+    background: var(--info);
+}
+/*============================About styling end============================*/
+
+/*============================Cart styling start============================*/
+.cart .container .row .card{
+    border-top: 1px  solid rgb(218, 218, 218) !important;
+    border: 1px  solid rgb(218, 218, 218) !important;
+    border-radius: 0 !important;
+}
+.cart .container .card .container .row span{
+    display: inline-block;
+    width: 63px;
+    height: 63px;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart .container .card .container .row a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgb(218, 218, 218);
+    color: var(--black-2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart .container .row button{
+    width: 100%;
+    background: var(--black-2);
+    color: var(--white);
+    font-size: 0.9rem;
+}
+.cart .container .row button:hover{
+    background: var(--info);
+}
+/*============================Cart styling end============================*/
+
